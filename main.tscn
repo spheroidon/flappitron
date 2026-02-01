@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://dpd5a5eojwxjv"]
+
+[ext_resource type="PackedScene" uid="uid://ouwpuvgn5noi" path="res://bird.tscn" id="1_ig7tw"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_0xm2m"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h2yge"]
+albedo_color = Color(0.5453123, 0.9033748, 0.42726913, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1bvp3"]
+albedo_color = Color(0.3128, 0.77832013, 0.92, 1)
+
+[node name="main" type="Node3D" unique_id=1137566947]
+
+[node name="CameraBehind" type="Camera3D" parent="." unique_id=1643570587]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 15)
+
+[node name="FloorBottom" type="MeshInstance3D" parent="." unique_id=1947804951]
+transform = Transform3D(8, 0, 0, 0, 1, 0, 0, 0, 700, 0, -10, 0)
+cast_shadow = 0
+mesh = SubResource("BoxMesh_0xm2m")
+surface_material_override/0 = SubResource("StandardMaterial3D_h2yge")
+
+[node name="SkyTop" type="MeshInstance3D" parent="." unique_id=1344339885]
+transform = Transform3D(8, 0, 0, 0, 1, 0, 0, 0, 700, 0, 10, 0)
+cast_shadow = 0
+mesh = SubResource("BoxMesh_0xm2m")
+surface_material_override/0 = SubResource("StandardMaterial3D_1bvp3")
+
+[node name="CameraSide" type="Camera3D" parent="." unique_id=181646351]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 16.478231, 0, 0)
+current = true
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1919175140]
+light_energy = 0.4
+
+[node name="DirectionalLight3D2" type="DirectionalLight3D" parent="." unique_id=1972512525]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+light_energy = 0.4
+
+[node name="DirectionalLight3D3" type="DirectionalLight3D" parent="." unique_id=499894982]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0)
+light_energy = 0.4
+
+[node name="DirectionalLight3D4" type="DirectionalLight3D" parent="." unique_id=1967950171]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, 0)
+light_energy = 0.4
+
+[node name="DirectionalLight3D5" type="DirectionalLight3D" parent="." unique_id=2038110356]
+transform = Transform3D(1.9106855e-15, 1, 4.371139e-08, 4.371139e-08, -4.371139e-08, 1, 1, 0, -4.371139e-08, 0, 0, 0)
+light_energy = 0.4
+
+[node name="DirectionalLight3D6" type="DirectionalLight3D" parent="." unique_id=1339680278]
+transform = Transform3D(-5.7320566e-15, -1, -1.3113416e-07, -4.371139e-08, 1.3113416e-07, -1, 1, 0, -4.371139e-08, 0, 0, 0)
+light_energy = 0.4
+
+[node name="bird" parent="." unique_id=858673270 instance=ExtResource("1_ig7tw")]

@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://ouwpuvgn5noi"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_owhn0"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g5k2s"]
+albedo_color = Color(0.96, 0.83151996, 0.25919998, 1)
+
+[node name="bird" type="Node3D" unique_id=858673270]
+
+[node name="mesh" type="MeshInstance3D" parent="." unique_id=1627302398]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+cast_shadow = 0
+mesh = SubResource("SphereMesh_owhn0")
+surface_material_override/0 = SubResource("StandardMaterial3D_g5k2s")
